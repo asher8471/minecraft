@@ -1,6 +1,6 @@
-# TinyCraft (Minecraft-inspired sandbox)
+# TinyCraft+ (Minecraft-inspired sandbox)
 
-This repo contains a tiny, terminal-based sandbox inspired by Minecraft. It generates a small block world, lets you move around, and place/remove blocks.
+TinyCraft+ is a terminal-based sandbox inspired by Minecraft. It generates a small world with resources, lets you explore, mine, craft, and save your progress.
 
 ## Requirements
 
@@ -20,13 +20,31 @@ Non-interactive demo (useful for CI/testing):
 python minecraft.py --demo --steps 12
 ```
 
+Load a saved world:
+
+```bash
+python minecraft.py --load savegame.json
+```
+
 ## Controls
 
 - `w`, `a`, `s`, `d`: move
-- `p`: place a block at the player location
-- `r`: remove a block at the player location
+- `m`: mine the block above you
+- `p`: place a block above you (uses inventory)
+- `c`: craft an item from recipes
+- `n`: rest and advance the day
+- `i`: view inventory
+- `save`: save the world
 - `q`: quit
+
+## Features
+
+- Procedural terrain with stone, dirt, trees, ore, and water
+- Mining drops resources and tools affect yield
+- Crafting system with recipes (planks, sticks, torches, pickaxe)
+- Day progression with hunger and health penalties
+- Save/load support via JSON
 
 ## Notes
 
-This is a minimal clone intended to be easy to run and extend.
+This is a small clone intended to be easy to run and extend.
